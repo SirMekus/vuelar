@@ -1,6 +1,6 @@
 {
   "name": "@sirmekus/vuelar",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Laravel pagination implementation for Vuejs",
   "main": "dist/library.js",
   "module": "dist/library.mjs",

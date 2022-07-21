@@ -33,7 +33,7 @@ Now the package will be available globally and you can reference or use it where
 
 <vuelar :links="state.result"  />
 
-</template
+</template>
 ```
 
 It is good practise to include the pagination component only when it's needed or necessary so the above code can be restructured to:
@@ -45,7 +45,7 @@ It is good practise to include the pagination component only when it's needed or
 
 <vuelar v-if="state.result.last_page > 1" :links="state.result"  />
 
-</template
+</template>
 ```
 
 ### Overview

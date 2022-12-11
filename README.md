@@ -4,7 +4,9 @@ vuelar (Vue-Laravel) is a vue package that takes care of pagination for a Larave
 
 # Installation
 
-$ npm install @sirmekus/vuelar
+```text
+npm install @sirmekus/vuelar
+```
 
 For starters, this package takes care of the navigation URL and updates the browser so that you can watch the route parameter change and perform any desired action.
 
@@ -12,7 +14,7 @@ For starters, this package takes care of the navigation URL and updates the brow
 
 After Installation, in your app.js file, all you have to do is import the package like so:
 
-```
+```js
 import { createApp } from 'vue';
 import  vuelarPlugin  from "@sirmekus/vuelar"
 
@@ -24,26 +26,26 @@ app.use(vuelarPlugin)
 
 Now the package will be available globally and you can reference or use it wherever you want pagination like so (please note that styling is done using Bootstrap 5 so you may want to check it out):
 
-```
+```js
 <template>
 
 //template content goes in here. For instance, displaying all users of the platform
 
 <vuelar :links="state.result"  />
 
-</template
+</template>
 ```
 
 It is good practise to include the pagination component only when it's needed or necessary so the above code can be restructured to:
 
-```
+```js
 <template>
 
 //template content goes in here. For instance, displaying all users of the platform
 
 <vuelar v-if="state.result.last_page > 1" :links="state.result"  />
 
-</template
+</template>
 ```
 
 ### Overview
@@ -70,7 +72,7 @@ In laravel, displaying this pagination has already been taken care of in blade w
 
 It is important that the variable being passed to the `:links` variable expected by the vuelar component be reactive. This is because this variable will typically contain data that will change as the pagination changes, thus needs to be 'refreshed' or 'recalculated' as well. To accomplish this you will typically have a function that calls an api after/during/before your component mounts (to avoid repeating yourself). After your component must have been mounted all you have to do is watch the URL bar for changes and then call this function. This package appends a query to the end of your browser url (whatever the URL may be) when a pagination link is clicked which you should then fetch and append as query to your API url. Let's take an example (we'll use the Composition API as it's encouraged but this this package is not limited to using only the Composition API):
 
-```
+```js
 <template>
 
 //template content goes in here. For instance, displaying all users of the platform

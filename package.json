@@ -1,6 +1,6 @@
 {
   "name": "@sirmekus/vuelar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Laravel pagination implementation for Vuejs",
   "main": "dist/library.js",
   "module": "dist/library.mjs",
@@ -21,9 +21,9 @@
   "author": "Emeka Ohakwe <SirMekus; Uncle E> (https://webloit.com)",
   "license": "ISC",
   "peerDependencies": {
-    "vue": "^3.2.21",
-    "vue-router": "^4.0.14",
-    "bootstrap": "^5.1.3"
+    "vue": "^3.*",
+    "vue-router": "^4.*",
+    "bootstrap": "^5.*"
   },
   "devDependencies": {
     "rollup": "^2.76.0",
